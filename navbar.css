@@ -1,0 +1,36 @@
+.Navbar {
+    position: fixed;
+    top: 0;
+    left: 5%;
+    z-index: 1000;
+    width: 90%;
+    height: 100px;
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    transition: 0.5s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.logo h2 {
+    font-size: 26px;
+    color: black;
+}
+.navbar {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: skyblue;
+}

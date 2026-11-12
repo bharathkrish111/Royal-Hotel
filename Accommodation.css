@@ -1,0 +1,326 @@
+/* =========================
+   BASIC
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: white;
+}
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.page-title {
+    padding: 55px 60px;
+    background-color: #f8f8f8;
+}
+
+.page-title h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.page-title p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+
+/* =========================
+   ACCOMMODATION
+========================= */
+
+.accommodation {
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.small-title {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.accommodation h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.description {
+    max-width: 800px;
+    margin: 0 auto 45px;
+    color: #777;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+
+/* =========================
+   ROOM CARDS
+========================= */
+
+.room-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+.room {
+    overflow: hidden;
+}
+
+
+
+/* =========================
+   ROOM IMAGE
+========================= */
+
+.room-image {
+    position: relative;
+    width: 100%;
+    height: 330px;
+    overflow: hidden;
+}
+
+.room-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+
+
+/* ⭐ IMAGE ZOOM ⭐ */
+
+.room:hover img {
+    transform: scale(1.1);
+}
+
+
+
+/* =========================
+   BOOK NOW
+========================= */
+
+.book-btn {
+    position: absolute;
+
+    left: 50%;
+    bottom: 20px;
+
+    transform: translateX(-50%);
+
+    background-color: #d6aa00;
+    color: white;
+
+    padding: 14px 30px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.book-btn:hover {
+    background-color: #b88d00;
+}
+
+
+
+/* =========================
+   ROOM NAME
+========================= */
+
+.room h3 {
+    font-family: Georgia, serif;
+    font-size: 18px;
+
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+
+
+/* =========================
+   PRICE
+========================= */
+
+.price {
+    color: #55b8c8;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.price span {
+    color: #999;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #222;
+    color: white;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 60px 30px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 40px;
+}
+
+.footer-container h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.footer-container p {
+    color: #bbb;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-container a {
+    display: block;
+
+    text-decoration: none;
+    color: #bbb;
+
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-container a:hover {
+    color: #d6aa63;
+}
+
+
+
+/* =========================
+   NEWSLETTER
+========================= */
+
+.footer-container input {
+    padding: 11px;
+    width: 75%;
+
+    border: none;
+    outline: none;
+}
+
+.footer-container button {
+    padding: 11px 15px;
+
+    border: none;
+
+    background-color: #d6aa63;
+    color: white;
+
+    cursor: pointer;
+}
+
+
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.copyright {
+    text-align: center;
+
+    padding: 20px;
+
+    border-top: 1px solid #444;
+
+    color: #aaa;
+
+    font-size: 13px;
+}
+
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .room-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav h2 {
+        margin-right: 0;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .room-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
